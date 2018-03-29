@@ -1,0 +1,14 @@
+#main {
+    .files {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        .file {
+            padding: 10px;
+
+            .fa {
+                font-size: 36px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.progress {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border: 2px solid #636e72;
+    margin-bottom: 20px;
+
+    .bar {
+        background: #636e72;
+        color: #dfe6e9;
+        padding: 10px;
+    }
+
+    .bar.color {
+        background: #dfe6e9;
+        color: #636e72;
+    }
+}
+
+.red {
+    background: #d63031 !important;
+    color: #dfe6e9 !important;
+    border-color: #d63031 !important;
+}

@@ -1,0 +1,25 @@
+#header {
+    height: 50px;
+    background-color: #0984e3;
+    color: #dfe6e9;
+    padding: 10px;
+
+    .nav {
+        display: flex;
+
+        header {
+            flex: 1;
+
+            .logo {
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+
+        .menu-icon {
+            flex: 1;
+            text-align: right;
+            line-height: 30px;
+        }
+    }
+}
