@@ -6,7 +6,7 @@ let content = require('./content.html');
 let footer = require('./footer.html');
 let sidebar = require('./sidebar.html');
 
-module.exports = {
+export default {
     template: `
     <div id="wrapper">
         ${header}${content}${footer}
