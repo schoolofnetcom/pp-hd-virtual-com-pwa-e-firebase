@@ -7,12 +7,13 @@ let footer = require('./footer.html');
 let sidebar = require('./sidebar.html');
 
 export default {
+    el: '#app',
     template: `
     <div id="wrapper">
         ${header}${content}${footer}
     </div>
     ${sidebar}`,
-    action: () => {
+    afterBind: () => {
         let openMenu = document.querySelector('#header .menu-icon');
         let closeMenu = document.getElementById('wrapper');
 

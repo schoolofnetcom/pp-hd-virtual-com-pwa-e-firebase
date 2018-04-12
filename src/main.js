@@ -1,15 +1,20 @@
 import templateComponent from './template';
-import file_list from './files_list';
+import fileListComponent from './files_list';
+import uploaderComponent from './uploader';
+
+const components = [
+    templateComponent,
+    fileListComponent,
+    uploaderComponent
+];
 
 class Init {
     constructor() {
-        let elementApp = document.getElementById('app');
-        elementApp.innerHTML = templateComponent.template;
-        templateComponent.action();
-
-        let contentBlock = document.getElementById('main');
-        contentBlock.innerHTML = file_list.template;
-        file_list.action();
+        components.forEach((component) => {
+            let element = document.querySelector(component.el);
+            element.innerHTML = component.template;
+            component.afterBind();
+        })
     }
 }
 

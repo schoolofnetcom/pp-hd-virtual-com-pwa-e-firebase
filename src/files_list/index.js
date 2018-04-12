@@ -3,8 +3,9 @@ import onClick from './on_click';
 require('./style.scss');
 
 export default {
+    el: '#main',
     template: require('./template.html'),
-    action() {
+    afterBind() {
         getData({
             id: '/files/1',
             title: 'home'
