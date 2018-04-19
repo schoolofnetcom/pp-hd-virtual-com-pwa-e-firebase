@@ -4,19 +4,24 @@ export default function (snapshot) {
 
     let partial = require('./partial.html');
 
-    data.sort((a, b) => {
-        if (typeof a[1] != 'object') {
-            return true;
+    let file = [];
+    let folder = [];
+    data.forEach((item, key) => {
+        if (typeof item[1] != 'object') {
+            data.splice(key);
         }
-        return a[1].title.localeCompare(b[1].title)
-    });
 
-    data.sort((a, b) => {
-        if (typeof a[1] != 'object') {
-            return true;
+        if (item[1].type == 'folder-open') {
+            folder.push(item);
+        } else {
+            file.push(item);
         }
-        return a[1].type < b[1].type
-    });
+    })
+
+    file.sort((a, b) => a[1].title.localeCompare(b[1].title));
+    folder.sort((a, b) => a[1].title.localeCompare(b[1].title));
+
+    data = folder.concat(file);
 
     let html = '';
     for (let index in data) {

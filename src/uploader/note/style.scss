@@ -1,0 +1,14 @@
+#note-text {
+    background-color: #eee;
+    border: #ccc 1px solid;
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#note-text:focus {
+    border: #0984e3 1px solid;
+}
