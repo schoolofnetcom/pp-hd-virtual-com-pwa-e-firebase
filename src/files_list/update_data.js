@@ -1,5 +1,11 @@
 export default function (snapshot) {
     let data = snapshot.val();
+
+    if (!data) {
+        document.querySelector('#main .files').innerHTML = 'Nenhum diretório ou arquivo encontrado...';
+        return;
+    }
+
     data = Object.entries(data);
 
     let partial = require('./partial.html');

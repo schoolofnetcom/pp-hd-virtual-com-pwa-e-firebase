@@ -3,18 +3,18 @@
     <p>Total de espaço: 1GB</p>
 
     <div class="progress">
-        <div class="bar">60% usado</div>
-        <div class="bar color">40% livre</div>
+        <div class="bar usage">60% usado</div>
+        <div class="bar color free">40% livre</div>
     </div>
 
-    <form action="">
+    <form id="addSharer" action="">
         <legend>Compartilhar drive</legend>
-        <input type="email" placeholder="Email..."><input type="submit" value=">" class="btn">
+        <input id="addSharerInput" type="email" placeholder="Email..."><input type="submit" value=">" class="btn">
     </form>
 
     <p>Compartilhados</p>
 
-    <ul>
+    <ul id="shared-list">
         <li>Nenhum</li>
     </ul>
 
